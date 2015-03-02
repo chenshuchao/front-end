@@ -1,0 +1,71 @@
+body{
+    background-color:#F0EDE4;
+    font-family: "微软雅黑";
+}
+canvas{
+    display:block;
+    margin:0px auto 10px;
+   /* border:1px solid #fff;*/
+    background-color:#BDBCBC;
+   /* box-shadow:0 1px 10px #999;*/
+}
+.btnGroup{
+    display:block;
+    margin: 0 auto;
+    width:800px;
+    position: absolute;
+    top: 477px;
+}
+.btn{
+    height: 50px;
+    line-height: 50px;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 5px #999;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #999;
+    border: 1px solid #ccc;
+    color: #fff;
+    display:block;
+    -webkit-transition:all 0.5s;
+}
+.start{
+    width: 260px;
+    background-color: #7BC5D8;
+}
+.start:hover{
+    background-color: #25758A;
+}
+.start em,.reset em{
+    font-size:16px;
+    font-style:normal;
+}
+.reset{
+    top: 100px;
+    width: 260px;
+    margin-top: 10px;
+    background-color:#F8A54B;
+}
+.reset:hover{
+    background-color:#BE5228;
+}
+
+
+.info{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 250px;
+    text-align: center;
+}
+.info h1{
+    font-weight:normal;
+}
+.info p{
+    font-size:22px;
+    margin-top:0;
+    color:#7BC5D8;
+    text-shadow:1px 2px 5px #999;
+}
