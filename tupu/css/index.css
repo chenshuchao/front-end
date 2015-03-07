@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft Yahei';
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 15px;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+.loading {
+    background:rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.loading .tip {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    color: #fff;
+    margin-left: -150px;
+    margin-top: -100px;
+}
+.loading img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+}
+.header-wrapper {
+    background: #ffb83d;;
+}
+.header-container {
+    height: 40px;
+    margin: 0 auto;
+    padding: 6px 0;
+}
+.header-left {
+    float: left;
+    margin: 0 0 0 50px;
+}
+.header-container .logo {
+    /*background: url(../img/logo.png) no-repeat;
+    background-size: 72px 36px;*/
+    display: inline-block;
+    margin-top: 2px;
+    float:left;
+    font-size:30px;
+}
+.header-container .logo img {
+    width: 72px;
+    height: 36px;
+}
+.header-container .address {
+    background: url(../img/arrow-down.png) no-repeat 38px 6px;
+    background-size: 10px 10px;
+    color: #fff;
+    float: left;
+    font-size: 15px;
+    padding: 0 20px 0 0;
+    position: relative;
+    margin: 18px 0 0 18px;
+    cursor: pointer;
+}
+.header-container .address .list {
+    border-radius: 6px;
+    background: #fff;
+    border: 1px solid #FFB83D;
+    position: absolute;
+    padding: 0 4px;
+    width: 120px;
+    height: 136px;
+    bottom: -148px;
+    z-index: 100;
+    display: none;
+}
+.header-container .address .list a {
+    color: #444;
+    display: block;
+}
+.header-container .address .list li {
+    margin: 2px 0;
+}
+.header-container .address .list li:hover {
+    background-color: #F8F6F6;
+} 
+.header-container .header-right {
+    float: right;
+    width: 364px;
+}
+.header-container .search {
+    float: left;
+    position: relative;
+    margin: 5px 0 0 0;
+}
+.header-container .search input {
+    background: #FFEBCC;
+    border-radius: 8px;
+    border: none;
+    margin: 0 10px 0 0;
+    width: 200px;
+    height : 30px;
+    padding: 0 8px;
+}
+.header-container .search .search-btn {
+    background: url(../img/search.png) no-repeat;
+    background-size: 28px 22px;
+    width: 28px;
+    height: 22px;
+    position: absolute;
+    top: 5px;
+    right: 12px;
+}
+.header-container .mode-wrapper {
+    color: #FF9900;
+    font-size: 14px;
+    float: right;
+    margin: 5px 30px 0 0;
+}
+.header-container .mode-wrapper span {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 14px; 
+}
+.header-container .mode-wrapper .normal-mode span {
+    text-align: center;
+}
+.header-container .mode-wrapper .select-mode {
+    display: none;
+}
+.main-container {
+    position: relative;
+    overflow: hidden;
+    background: url(../img/bg.jpg);
+    background-size: 640px 320px;
+}
+
+
+.sideBar {
+    background: #FEF1D1;
+    box-shadow: 3px 1px 15px #ccc;
+    color: #CA6700;
+    width: 270px;
+    float: left;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: -270px;
+    height: 100%;
+    z-index: 10;
+}
+.sideBar h4{
+    color: #F90;
+    text-align: center;
+    padding: 0 0 10px;
+    border-bottom: 1px solid;
+}
+.sideBar a {
+    color: #f90;
+}
+.sideBar em {
+    color: #E41D0A;
+    font-style: normal;
+}
+.sideBar h5 {
+    color: #F90;
+    border-bottom: 1px solid;
+    padding: 0 0 2px;
+}
+.sideBar .sideBar-content {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.sideBar .sideBar-scroll {
+    background: #E4D6BD;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+}
+.sideBar .sideBar-scroll .sideBar-scroll-btn {
+    width: 10px;
+    border-radius: 4px;
+    position: absolute;
+    top : 0;
+    background: #ccc;
+    height: 30px;
+}
+.sideBar .container {
+    margin: 8px 0 30px;
+    padding: 0 10px;
+}
+.sideBar .restaurant {
+    height: 100%;
+}
+.sideBar .restaurant .baseInfo-wrapper {
+    margin: 8px 0 24px;
+}
+.sideBar .restaurant .baseInfo-wrapper p,
+.sideBar .restaurant .baseInfo-wrapper .others {
+    margin: 0 0 18px;
+}
+.sideBar .restaurant .baseInfo-wrapper .others .line {
+    overflow: hidden;
+}
+.sideBar .restaurant .baseInfo-wrapper .others .average,
+.sideBar .restaurant .baseInfo-wrapper .others .environment {
+    float:left;
+}
+.sideBar .restaurant .baseInfo-wrapper .others .taste,
+.sideBar .restaurant .baseInfo-wrapper .others .service {
+    float: right;
+}
+.sideBar .restaurant .score-star {
+    background: url(../img/star.png) no-repeat;
+    background-size: 101px 114px;
+    background-position-x: 40px;
+}
+.cuisine-wrapper .cuisine {
+    background: #FC0;
+    color: #fff;
+    padding: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 2px;
+}
+.sideBar .comment-wrapper .comment {
+    margin: 0 0 8px;
+}
+
+
+.sideBar .food {
+    height: 100%;
+}
+.sideBar .food .baseInfo-wrapper {
+    margin: 8px 0 24px;
+}
+.sideBar .food .baseInfo-wrapper img {
+    width : 250px;
+}
+.sideBar .food .baseInfo-wrapper p {
+    margin: 0 0 18px;
+}
+.sideBar .food .img-container {
+    min-height: 180px;
+    padding: 0;
+}
+.cuisine-wrapper .cuisine {
+    background: #FC0;
+    color: #fff;
+    padding: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 2px;
+}
+.sideBar .comment-wrapper .comment {
+    margin: 0 0 8px;
+}
+
+.sideBar .resRank {
+    height: 100%;
+}
+.sideBar .resRank h4 {
+    text-align: left;
+    border: none;
+    padding: 0;
+}
+.sideBar .resRank h4 span{
+    
+    color: #fff;
+    background: url(../img/rankbg.png) no-repeat -1px -3px;
+    background-size: 40px 30px;
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    margin: 0 8px 0 0;
+}
+
+.sideBar .resRank .res {
+    margin: 10px 0 20px;
+}
+.sideBar .resRank .cuisine-wrapper .container {
+    margin: 4px 0;
+    padding: 0;
+}
+.sideBar .resRank .cuisine-wrapper .cuisine {
+    background: #FC0;
+    color: #fff;
+    padding: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 2px;
+}
+.sideBar .resRank  p,
+.sideBar .resRank  .others {
+    margin: 0 0 4px;
+}
+.sideBar .resRank .others .line {
+    overflow: hidden;
+}
+.sideBar .resRank .others .average,
+.sideBar .resRank .others .environment {
+    float:left;
+}
+.sideBar .resRank .others .taste,
+.sideBar .resRank .others .service {
+    float: right;
+}
+.sideBar .resRank .score-star {
+    background: url(../img/star.png) no-repeat;
+    background-size: 101px 114px;
+    background-position-x: 40px;
+}
+.sideBar .resRank .detail-btn {
+    background: #FF9900;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+#sideBarBtn {
+    width: 16px;
+    background: #FAE7C9;
+    background-size: 36px 87px;
+    box-shadow: 3px 1px 15px #ccc;
+    position: absolute;
+    padding: 4px;
+    top: 190px;
+    left: 270px;
+    z-index: 2;
+    cursor: pointer;
+}
+#canvas {
+    float: right;
+}
+
+.smallCard {
+    background: #fff;
+    border: 2px solid #fc0;
+    border-radius: 8px;
+     width: 230px;
+    font-size: 13px;
+    color: #666;
+    letter-spacing: 1px;
+    padding: 12px;
+    left: 200px;
+    background-size: 20px 14px;
+    position: absolute;
+   
+}
+.smallCard h4 {
+    color: #F90;
+    margin: 0 0 4px;
+}
+.smallCard p {
+    line-height: 1.5;
+}
+
+.smallCard .taste,
+.smallCard .service {
+    display: inline-block;
+    float: right;
+}
+.smallCard .score {
+    background: url(../img/star.png) 40px 0px no-repeat;
+    background-size: 101px 114px;
+}
+.smallCard .cardArrow {
+    display: block;
+    width: 28px;
+    height: 20px;
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    background: url(../img/cardarrow.png) no-repeat;
+    background-size: 28px 20px;
+}
+.smallCard .cardCloseBtn {
+    position: absolute;
+    color: #fc0;
+    top: 0px;
+    right: 8px;
+    cursor: pointer;
+}
+#flagContainer .flag {
+    background: url(../img/flag.png);
+    background-size: 30px 40px;
+    cursor: pointer;
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 8px;
+}
+#flagContainer .flag span {
+    margin: 4px 0 0 11px;
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+}
+
+.commendFoods-container {
+    width: 900px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -170px;
+    margin-left: -450px;
+}
+.commendFoods-container h3 {
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: #f90;
+    text-align: center;
+    margin: 0 0 10px;
+}
+.commendFoods-container .commendFood {
+    height: 200px;
+    width: 150px;
+    float: left;
+    position: relative;
+}
+.commendFoods-container .commendFood h5 {
+    text-align: center;
+    color: #f90;
+    margin: 167px 0 0;
+}
+.commendFoods-container .commendFood img {
+    width: 100px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.commendFoods-container .commendFood :hover img {
+    width: 120px;
+}
+.commendFoods-container .commendFood :hover h5 {
+    color: red;
+} 

@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>食谱</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div class="wrapper" id="viewport">
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div class="header-left">
+                        <div class="logo">
+                            <img src="img/logo.png">
+                        </div>
+                        <div class="address" id="address">
+                            <span>簋街</span>
+                            <ul class="list" id="addressList">
+                                <li><a href="index.html">簋街</a></li>
+                                <li><a href="index.html">北京西站</a></li>
+                                <li><a href="index.html">王府井</a></li>
+                                <li><a href="index.html">上地</a></li>
+                                <li><a href="index.html">钓鱼台</a></li>
+                                <li><a href="index.html">西单</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="header-right">
+                        <div class="search">
+                            <input type="text" placeholder="在食谱中搜索...">
+                            <span class="search-btn"></span>
+                        </div> 
+                        <div class="mode-wrapper">
+                            <div class="nomal-mode">
+                                <span id="enterSelect">进入选择模式</span>
+                            </div>
+                            <div class="select-mode">
+                                <span id="selectConfirm">确定</span>
+                                <span id="selectCancel">取消</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <button id="test">redraw</button>
+            <button id="btn">进入布局模式</button> -->
+            <!-- <button id="save">保存</button> -->
+            <div class="main-container" id="mainContainer">
+                
+                <div class="sideBar" id="sideBar">
+                    <div class="sideBar-content" id="sideBarContent">
+                        <div class="container">
+                        </div>
+                    </div>
+                    <div id="sideBarBtn">
+                        显示&gt;
+                    </div>
+                </div>
+                    
+                <canvas id="canvas" width="1400px" height="600px"></canvas>
+                <div id="flagContainer">
+                </div>
+               
+            </div>
+            <div class="loading">
+                <p class="tip">正在加载数据，请稍等......</p>
+                <img src="img/loading.gif">
+            </div>
+            
+        </div>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        var address = document.getElementById('address');
+        var addressList = document.getElementById('addressList');
+        address.addEventListener('click',function() {
+            addressList.style.display = 'block';
+        })
+        $(document).bind('click',function(e){
+            var e = e || window.event; //浏览器兼容性
+            var elem = e.target || e.srcElement;
+            while (elem) { //循环判断至跟节点，防止点击的是div子元素
+                if (elem.id && elem.id=='address') {
+                    return;
+                }
+                elem = elem.parentNode;
+            }
+            $('#addressList').css('display','none'); //点击的不是div或其子元素
+        });
+    </script>
+    <script src="js/index.js"></script>
+    </body>
+</html>
